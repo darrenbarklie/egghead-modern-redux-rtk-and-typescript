@@ -7,6 +7,10 @@ https://egghead.io/courses/modern-redux-with-redux-toolkit-rtk-and-typescript-64
 
 &nbsp;
 
+[Redux Toolkit](https://redux-toolkit.js.org/) provides really nice guardrails and simplifies connection of components to a Redux store. It also includes utilities that improve TypeScript's ability to understand Redux.
+
+This project demonstrates splitting a store into slices, creating reducers and selectors and managing async actions with thunks, by mimicing a shopping cart workflow.
+
 ## Installation
 
 This app leverages [X](https://www.npmjs.com/) ...
@@ -25,6 +29,6 @@ npm install
 ```bash
 
 # Run project
-npm run
+npm run dev
 
 ```
