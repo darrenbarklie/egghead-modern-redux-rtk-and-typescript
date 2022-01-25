@@ -32,3 +32,27 @@ npm install
 npm run dev
 
 ```
+
+Project will run on http://localhost:3000/
+
+## Concepts
+
+The Redux `<Provider />` wraps around the `<App />` and is passed a global `store` configured with a root reducer function. The store calls the root reducer onces and saves the return value as its initial `state`.
+
+When the UI is first rendered, UI components access the current state of the Redux store, and use that data to decide what to render. They also subscribe to any future store updates to monitor state changes.
+
+When an event occurs in the app, like a user clicking a button, the app dispatches an action to the Redux store, like `dispatch({type: 'counter/incremented'})`.
+
+The store runs the reducer function again with the previous `state` and the current `action` and saves the return value as the new `state` object. The store notifies all subscribed UI components.
+
+These elements check to see if the parts of state they bind to are changed. Each component that sees its data source has changed will re-render to reflect the new data.
+
+We can split up our Redux store into multiple slices, a way of keeping data organised. A single slice file will usually export a reducer and any actions or selectors associated with that data.
+
+We can create a Redux slice for each concern of our app (i.e. a cart and a product). The function `createSlice` accepts a `name`, `initialState`, `reducers` and `extraReducers`.
+
+A TypeScript `interface` is used to define the shape of an object, such as `CartState{}`.
+
+## References
+
+- https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow#redux-application-data-flow
