@@ -6,7 +6,12 @@ export interface ProductsState {
 }
 
 const initialState: ProductsState = {
-  products: {},
+  products: {
+    // @ts-ignore
+    "123": {
+      name: "New test product",
+    },
+  },
 };
 
 const productsSlice = createSlice({
