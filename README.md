@@ -55,6 +55,8 @@ We can create a Redux slice for each concern of our app (i.e. a cart and a produ
 
 We can import these to our global `store`, to allow us to interact with and reason about a single global store.
 
+A selector is simply a function that takes the Redux `state` and returns any value that it wants. `useAppSelector()` function allows us to pass in a selector, grab values from the Redux state, and rerender any components associated with that state.
+
 ## References
 
 - https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow#redux-application-data-flow
