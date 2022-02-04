@@ -21,6 +21,9 @@ const cartSlice = createSlice({
         state.items[id] = 1;
       }
     },
+    removeFromCart(state, action: PayloadAction<string>) {
+      delete state.items[action.payload];
+    },
   },
 });
 
@@ -49,7 +52,7 @@ export const getMemoizedNumItems = createSelector(
   }
 );
 
-export const getTotalPrice = createSelector(
+export const getTotalPrice = createSelector<>(
   (state: RootState) => state.cart.items,
   (state: RootState) => state.products.products,
   (items, products) => {
